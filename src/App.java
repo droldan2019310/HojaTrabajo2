@@ -11,12 +11,20 @@ public class App {
 
     private Stack stack = new Stack<Float>();
     private Calculator calculator = new Calculator();
+
+    /**
+     * start app
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         App app = new App();
         app.readFile();
     }
 
-
+    /**
+     * read file in assets/file.txt
+     */
     public void readFile(){
         File file = new File("src/assets/file.txt");
         // Note:  Double backquote is to avoid compiler
@@ -48,7 +56,10 @@ public class App {
         }
     }
 
-
+    /**
+     * validate character in line of txt
+     * @param character
+     */
     public void validateCharacter(char character){
         if(Character.isDigit(character)){
             String numString = Character.toString(character);;
@@ -59,6 +70,10 @@ public class App {
         }
     }
 
+    /**
+     * validate operation and set result in arraylist
+     * @param operator
+     */
     public void menuOperations(char operator){
         float a,b,result=0;
         switch(operator){

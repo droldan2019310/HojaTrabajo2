@@ -7,6 +7,12 @@ import interfaces.IStack;
 public class Stack<T> implements IStack<T> {
     private ArrayList<T> numbers = new ArrayList<T>();
     int position=-1;
+
+    
+    /**
+     * set number in arraylist
+     * @param item
+     */
     @Override
     public void push(T item) {
         // TODO Auto-generated method stub
@@ -14,6 +20,9 @@ public class Stack<T> implements IStack<T> {
         position++;
     }
 
+    /**
+     * get and remove the last item of arraylist
+     */
     @Override
     public T pop() {
         // TODO Auto-generated method stub
@@ -23,6 +32,10 @@ public class Stack<T> implements IStack<T> {
         return a;
     }
 
+
+    /**
+     * get the last item in arraylist
+     */
     @Override
     public T peek() {
         // TODO Auto-generated method stub
